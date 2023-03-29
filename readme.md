@@ -1,7 +1,6 @@
-# zilpzalp
+![zilpzalp](https://github.com/kilipan/zilpzalp/blob/main/img/zilpzalp_photo.jpg?raw=true)
 
-![zilpzalp]()
-
+# zilpzalp QMK firmware
 *A wonky 28-key split-unibody column-stagger keyboard.*  
 **IMPORTANT: This firmware is only suitable for the Seeed Xiao RP2040 MCU!**
 If you would like to use a different MCU, please consider using ZMK firmware.
