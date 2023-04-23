@@ -24,7 +24,7 @@
         "vid": "0xABBA"
     },
     "layouts": {
-        "LAYOUT_zilpzalp": {
+        "LAYOUT": {
             "layout": [
                 { "label":"K01", "x": 1, "y": 0 },
                 { "label":"K02", "x": 2, "y": 0 },

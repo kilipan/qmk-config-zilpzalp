@@ -6,8 +6,8 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
-     *     ┌───┬───┬───┬───┐        ┌───┬───┬───┬───┐    
-     *   V │ W │ F │ P │ B │ Q      │ J │ L │ U │ Y │    
+     *     ┌───┬───┬───┬───┐        ┌───┬───┬───┬───┐
+     *   V │ W │ F │ P │ B │ Q      │ J │ L │ U │ Y │
      * ┌───┼───┼───┼───┼───┤        ├───┼───┼───┼───┼───┐
      * │ R │ S │ T │ H │ K │        │ X │ N │ A │ I │ O │
      * └───┼───┼───┼───┼───┘        └───┼───┼───┼───┼───┘
@@ -16,31 +16,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *             │ESC│SPC│        │ E │ENT│
      *             └───┴───┘        └───┴───┘
      */
-    [_APTMAK] = LAYOUT_zilpzalp(
+    [_APTMAK] = LAYOUT(
                  KC_W,    KC_F,    KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y,
                  HRM_S,   HRM_T,   HRM_H,   HRM_K,   HRM_X,   HRM_N,   HRM_A,   HRM_I,
         HRM_R,   KC_C,    KC_G,    KC_D,                      KC_M,    KC_COMM, KC_DOT,  HRM_O,
                                    NUM_ESC, NAV_SPC, SYM_KCE, FUN_ENT
     ),
-    [_NUM] = LAYOUT_zilpzalp(
+    [_NUM] = LAYOUT(
                  KC_9,    KC_8,    KC_7,    XXXXXXX,             KC_PLUS, KC_7,    KC_8,    KC_9,
                  ALT_T(KC_6),GUI_T(KC_5),SFT_T(KC_4), XXXXXXX,   KC_MINS, KC_4,    KC_5,    KC_6,
         KC_LCTL, KC_3,    KC_2,    KC_1,                                  KC_1,    KC_2,    KC_3,    KC_SLASH,
                                    _______, _______,             KC_E,    KC_0
     ),
-    [_NAV] = LAYOUT_zilpzalp(
+    [_NAV] = LAYOUT(
                  KC_INS,  KC_UP,   KC_BSPC, KC_VOLD,                   KC_VOLU, KC_BSPC, KC_DEL,  KC_INS,
                  ALT_T(KC_LEFT),GUI_T(KC_DOWN),SFT_T(KC_RGHT),KC_MUTE, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
         KC_LCTL, KC_HOME, KC_PGDN, KC_END,                                      KC_HOME, KC_PGUP, KC_END,  KC_TAB,
                                    _______, _______,                   _______, _______
     ),
-    [_SYM] = LAYOUT_zilpzalp(
+    [_SYM] = LAYOUT(
                  KC_GRV,  KC_DQT,  KC_MDOT, KC_LBRC, KC_RBRC, KC_BSLS, KC_PIPE, KC_QUES,
                  KC_AT,   KC_HASH, KC_DLR,  KC_LPRN, KC_RPRN, KC_AMPR, KC_ASTR, KC_PERC,
         KC_EXLM, KC_TILD, KC_QUOT, KC_UNDS,                   KC_MINS, KC_PLUS, KC_EQL,  KC_CIRC,
                                    _______, KC_LSFT, _______, _______
     ),
-    [_FUN] = LAYOUT_zilpzalp(
+    [_FUN] = LAYOUT(
                  QK_BOOT, _______, _______, _______, KC_F12,  KC_F7,   KC_F8,   KC_F9,
                  _______, _______, _______, _______, KC_F11,  KC_F4,   KC_F5,   KC_F6,
         QK_RBT,  _______, _______, _______,                   KC_F1,   KC_F2,   KC_F3,   KC_F10,
@@ -110,6 +110,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             // Let QMK process the KC_DOT keycode as usual outside of shift
             return true;
+        }
+        case KC_SCH:
+        {
+            if (record->event.pressed) {
+                tap_code(KC_S);
+                tap_code(KC_C);
+                tap_code(KC_H);
+            } else {
+            }
+            break;
         }
     }
     return true;

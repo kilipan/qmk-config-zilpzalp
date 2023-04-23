@@ -69,8 +69,8 @@ combo_t key_combos[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
-     *     ┌───┬───┬───┬───┐   ┌───┬───┬───┬───┐    
-     *   Q │ W │ E │ R │ T │   │ Y │ U │ I │ O │ P  
+     *     ┌───┬───┬───┬───┐   ┌───┬───┬───┬───┐
+     *   Q │ W │ E │ R │ T │   │ Y │ U │ I │ O │ P
      * ┌───┼───┼───┼───┼───┤   ├───┼───┼───┼───┼───┐
      * │ A │ S │ D │ F │ G │   │ H │ J │ K │ L │ ; │
      * └───┼───┼───┼───┼───┘   └───┼───┼───┼───┼───┘
@@ -79,31 +79,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *             │ESC│SPC│   │RET│BSP│
      *             └───┴───┘   └───┴───┘
      */
-    [_ALPHA] = LAYOUT_zilpzalp(
+    [_ALPHA] = LAYOUT(
                  KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,
                  ALT_S,   GUI_D,   SHT_F,   RALT_G,  RALT_H,  SHT_J,   GUI_K,   ALT_L,
-       CTL_A,    KC_X,    KC_C,    KC_V,                      KC_M,    KC_COMM, KC_DOT,  CTL_SCL,  
+       CTL_A,    KC_X,    KC_C,    KC_V,                      KC_M,    KC_COMM, KC_DOT,  CTL_SCL,
                                    NUM_ESC, NAV_SPC, SYM_ENT, FUN_BSP
     ),
-    [_NUM] = LAYOUT_zilpzalp(
+    [_NUM] = LAYOUT(
                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PLUS, KC_7,    KC_8,    KC_9,
                  KC_LALT, KC_LGUI, KC_LSFT, XXXXXXX, KC_MINS, KC_4,    KC_5,    KC_6,
         KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX,                   KC_1,    KC_2,    KC_3,    KC_SLASH,
                                    _______, _______, KC_LSFT, KC_0
     ),
-    [_NAV] = LAYOUT_zilpzalp(
+    [_NAV] = LAYOUT(
                  XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD, KC_VOLU, KC_BSPC, KC_DEL,  KC_INS,
                  KC_LALT, KC_LGUI, KC_LSFT, KC_MUTE, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
         KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX,                   KC_HOME, XXXXXXX, KC_END,  KC_TAB,
                                    _______, _______, _______, _______
     ),
-    [_SYM] = LAYOUT_zilpzalp(
+    [_SYM] = LAYOUT(
                  KC_GRV,  KC_DQT,  KC_MDOT, KC_LBRC, KC_RBRC, KC_BSLS, KC_PIPE, KC_LT,
                  KC_AT,   KC_HASH, KC_DLR,  KC_LPRN, KC_RPRN, KC_AMPR, KC_ASTR, KC_PERC,
         KC_EXLM, XXXXXXX, KC_QUOT, KC_UNDS,                   KC_MINS, KC_PLUS, KC_EQL,  KC_CIRC,
                                    _______, KC_LSFT, _______, _______
     ),
-    [_FUN] = LAYOUT_zilpzalp(
+    [_FUN] = LAYOUT(
                  QK_BOOT, _______, _______, _______, KC_F12,  KC_F7,   KC_F8,   KC_F9,
                  _______, _______, _______, _______, KC_F11,  KC_F4,   KC_F5,   KC_F6,
         _______, _______, _______, _______,                   KC_F1,   KC_F2,   KC_F3,   KC_F10,
