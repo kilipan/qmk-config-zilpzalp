@@ -35,11 +35,8 @@ enum custom_keycodes {
 // LAYER TAP BEHAVIORS
 #define NUM_ESC LT(_NUM, KC_ESC)
 #define NAV_SPC LT(_NAV, KC_SPC)
-// #define SYM_ENT LT(_SYM, KC_ENT)
 #define SYM_KCE LT(_SYM, KC_E)
-// #define FUN_BSP LT(_FUN, KC_BSPC)
 #define FUN_ENT LT(_FUN, KC_ENT)
-// #define FUN_KCE LT(_FUN, KC_E)
 // OTHER
 #define KC_MDOT LSFT(RALT(KC_SCLN))
 // combos
@@ -51,15 +48,15 @@ enum combo_events {
     SCH_COMBO,
     SLASH_COMBO,
     MINUS_COMBO,
-    ENTER_COMBO,
+    QUOT_COMBO,
     // parentheticals
     L_CBR_COMBO,
-    L_PRN_COMBO,
     L_BRC_COMBO,
+    L_PRN_COMBO,
     L_ABK_COMBO,
     R_CBR_COMBO,
-    R_PRN_COMBO,
     R_BRC_COMBO,
+    R_PRN_COMBO,
     R_ABK_COMBO,
     // caps
     CAPSWORD_COMBO,
@@ -78,16 +75,17 @@ const uint16_t PROGMEM z_combo[] = {KC_C, KC_G, COMBO_END};
 const uint16_t PROGMEM v_combo[] = {KC_W, KC_F, COMBO_END};
 const uint16_t PROGMEM sch_combo[] = {KC_W, KC_P, COMBO_END};
 const uint16_t PROGMEM slash_combo[] = {KC_COMMA, KC_DOT, COMBO_END};
-const uint16_t PROGMEM minus_combo[] = {KC_G, KC_D, COMBO_END};
+const uint16_t PROGMEM minus_combo[] = {KC_M, KC_COMMA, COMBO_END};
+const uint16_t PROGMEM quot_combo[] = {KC_G, KC_D, COMBO_END};
 const uint16_t PROGMEM enter_combo[] = {KC_M, KC_COMMA, COMBO_END};
 // parentheticals
 const uint16_t PROGMEM l_cbr_combo[] = {KC_W, HRM_S, COMBO_END};
-const uint16_t PROGMEM l_prn_combo[] = {KC_F, HRM_T, COMBO_END};
-const uint16_t PROGMEM l_brc_combo[] = {KC_P, HRM_H, COMBO_END};
+const uint16_t PROGMEM l_brc_combo[] = {KC_F, HRM_T, COMBO_END};
+const uint16_t PROGMEM l_prn_combo[] = {KC_P, HRM_H, COMBO_END};
 const uint16_t PROGMEM l_abk_combo[] = {KC_B, HRM_K, COMBO_END};
 const uint16_t PROGMEM r_cbr_combo[] = {KC_Y, HRM_I, COMBO_END};
-const uint16_t PROGMEM r_prn_combo[] = {KC_U, HRM_A, COMBO_END};
-const uint16_t PROGMEM r_brc_combo[] = {KC_L, HRM_N, COMBO_END};
+const uint16_t PROGMEM r_brc_combo[] = {KC_U, HRM_A, COMBO_END};
+const uint16_t PROGMEM r_prn_combo[] = {KC_L, HRM_N, COMBO_END};
 const uint16_t PROGMEM r_abk_combo[] = {KC_J, HRM_X, COMBO_END};
 // caps
 const uint16_t PROGMEM capsword_combo[] = {HRM_H, HRM_N, COMBO_END};
@@ -96,9 +94,6 @@ const uint16_t PROGMEM capslock_combo[] = {KC_W, KC_Y, COMBO_END};
 const uint16_t PROGMEM bspc_combo[] = {KC_L, KC_U, COMBO_END};
 const uint16_t PROGMEM delw_combo[] = {KC_L, KC_Y, COMBO_END};
 const uint16_t PROGMEM del_combo[] =  {KC_U, KC_Y, COMBO_END};
-// const uint16_t PROGMEM bspc_combo[] = {HRM_N, HRM_A, COMBO_END};
-// const uint16_t PROGMEM delw_combo[] = {HRM_N, HRM_I, COMBO_END};
-// const uint16_t PROGMEM del_combo[] = {HRM_A, HRM_I, COMBO_END};
 
 combo_t key_combos[] = {
     // alphas usually on base
@@ -108,7 +103,7 @@ combo_t key_combos[] = {
     [SCH_COMBO] = COMBO(sch_combo, KC_SCH),
     [SLASH_COMBO] = COMBO(slash_combo, KC_SLASH),
     [MINUS_COMBO] = COMBO(minus_combo, KC_MINUS),
-    [ENTER_COMBO] = COMBO(enter_combo, KC_ENTER),
+    [QUOT_COMBO] = COMBO(quot_combo, KC_QUOT),
     // parentheticals
     [L_BRC_COMBO] = COMBO(l_brc_combo, KC_LBRC),
     [L_PRN_COMBO] = COMBO(l_prn_combo, KC_LPRN),
