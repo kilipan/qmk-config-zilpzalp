@@ -23,13 +23,13 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 The `default` keymap is set to QWERTY with the `Q`, `Z`, `B`, `/`, and `P` keys missing.
 They are reacheable via combos.
 `N` was moved to the right reachy thumb.
-Please consult the [keymap file](https://github.com/kilipan/zilpzalp_qmk/keymaps/default/keymap.c) for further details.
+Please consult the [keymap file](https://github.com/kilipan/qmk-config-zilpzalp/tree/main/keymaps/default/keymap.c) for further details.
 
 ## Vial support
 Ready-to-flash Vial firmware is provided as `zilpzalp_vial.uf2`.
 
 If you want to compile the Vial firmware yourself, you may use `make zilpzalp:vial` in your `vial-qmk` directory.
-Also see [the `vial` keymap directory](https://github.com/kilipan/zilpzalp_qmk/keymaps/vial/).
+Also see [the `vial` keymap directory](https://github.com/kilipan/qmk-config-zilpzalp/tree/main/keymaps/vial).
 For further details please consult the [Vial docs](https://get.vial.today/docs/porting-to-vial.html#1-prepare-your-build-environment).
 
 ## Bootloader
