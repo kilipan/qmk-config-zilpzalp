@@ -1,8 +1,5 @@
 #include "quantum.h"
 
-// readability
-#define ___ KC_NO
-
 #define LAYOUT( \
               K01, K02, K03, K04,    K05, K06, K07, K08,      \
          K20, K11, K12, K13, K14,    K15, K16, K17, K18, K29, \

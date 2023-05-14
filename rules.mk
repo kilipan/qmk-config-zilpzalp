@@ -9,5 +9,5 @@ MUSIC_ENABLE = no
 # LTO must be disabled for RP2040 builds
 LTO_ENABLE = no
 SPACE_CADET_ENABLE = no
-GRAVE_ESC_ENABLE = no 
+GRAVE_ESC_ENABLE = no
 MAGIC_ENABLE = no
