@@ -17,7 +17,8 @@ enum custom_keycodes {
     SYM,
     FUN,
     KC_MDOT,
-    KC_SCH
+    KC_SCH,
+    KC_DELLINE
 };
 
 // LEFT HAND HOME ROW MODS
@@ -64,6 +65,7 @@ enum combo_events {
     // deletion
     BSPC_COMBO,
     DELW_COMBO,
+    DELLINE_COMBO,
     DEL_COMBO,
     // convenience
     COMBO_LENGTH
@@ -77,7 +79,7 @@ const uint16_t PROGMEM sch_combo[] = {KC_W, KC_P, COMBO_END};
 const uint16_t PROGMEM slash_combo[] = {KC_COMMA, KC_DOT, COMBO_END};
 const uint16_t PROGMEM minus_combo[] = {KC_M, KC_COMMA, COMBO_END};
 const uint16_t PROGMEM quot_combo[] = {KC_G, KC_D, COMBO_END};
-const uint16_t PROGMEM enter_combo[] = {KC_M, KC_COMMA, COMBO_END};
+// const uint16_t PROGMEM enter_combo[] = {KC_M, KC_COMMA, COMBO_END};
 // parentheticals
 const uint16_t PROGMEM l_cbr_combo[] = {KC_W, HRM_S, COMBO_END};
 const uint16_t PROGMEM l_brc_combo[] = {KC_F, HRM_T, COMBO_END};
@@ -93,6 +95,7 @@ const uint16_t PROGMEM capslock_combo[] = {KC_W, KC_Y, COMBO_END};
 // deletion
 const uint16_t PROGMEM bspc_combo[] = {KC_L, KC_U, COMBO_END};
 const uint16_t PROGMEM delw_combo[] = {KC_L, KC_Y, COMBO_END};
+const uint16_t PROGMEM delline_combo[] = {KC_L, KC_U, KC_Y, COMBO_END};
 const uint16_t PROGMEM del_combo[] =  {KC_U, KC_Y, COMBO_END};
 
 combo_t key_combos[] = {
@@ -106,12 +109,12 @@ combo_t key_combos[] = {
     [QUOT_COMBO] = COMBO(quot_combo, KC_QUOT),
     // parentheticals
     [L_BRC_COMBO] = COMBO(l_brc_combo, KC_LBRC),
-    [L_PRN_COMBO] = COMBO(l_prn_combo, KC_LPRN),
     [L_CBR_COMBO] = COMBO(l_cbr_combo, KC_LCBR),
+    [L_PRN_COMBO] = COMBO(l_prn_combo, KC_LPRN),
     [L_ABK_COMBO] = COMBO(l_abk_combo, KC_LABK),
     [R_BRC_COMBO] = COMBO(r_brc_combo, KC_RBRC),
-    [R_PRN_COMBO] = COMBO(r_prn_combo, KC_RPRN),
     [R_CBR_COMBO] = COMBO(r_cbr_combo, KC_RCBR),
+    [R_PRN_COMBO] = COMBO(r_prn_combo, KC_RPRN),
     [R_ABK_COMBO] = COMBO(r_abk_combo, KC_RABK),
     // caps
     [CAPSWORD_COMBO] = COMBO(capsword_combo, CW_TOGG),
@@ -119,6 +122,7 @@ combo_t key_combos[] = {
     // deletion
     [BSPC_COMBO] = COMBO(bspc_combo, KC_BSPC),
     [DELW_COMBO] = COMBO(delw_combo, C(KC_BSPC)),
+    [DELLINE_COMBO] = COMBO(delline_combo, KC_DELLINE),
     [DEL_COMBO] = COMBO(del_combo, KC_DEL),
 };
 
