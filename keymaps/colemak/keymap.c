@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ┌───┼───┼───┼───┼───┤   ├───┼───┼───┼───┼───┐
      * │ A │ R │ S │ T │ G │   │ M │ N │ E │ I │ O │
      * └───┼───┼───┼───┼───┘   └───┼───┼───┼───┼───┘
-     *   Z │ X │ C │ D │ V       - │ M │ , │ . │ /
+     *   Z │ X │ C │ D │ V       - │ H │ , │ . │ /
      *     └───┴───┼───┼───┐   ┌───┼───┼───┴───┘
      *             │ESC│SPC│   │ N │ENT│
      *             └───┴───┘   └───┴───┘
@@ -92,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_ALPHA] = LAYOUT(
                  KC_W,    KC_F,    KC_P,    KC_K,    KC_J,    KC_L,    KC_U,    KC_Y,
        CTL_A,    ALT_R,   GUI_S,   SFT_T,   RALT_G,  RALT_M,  SFT_N,   GUI_E,   ALT_I,   CTL_O,
-                 KC_X,    KC_C,    KC_D,                      KC_M,    KC_COMM, KC_DOT,
+                 KC_X,    KC_C,    KC_D,                      KC_H,    KC_COMM, KC_DOT,
                                    NUM_ESC, NAV_SPC, SYM_ENT, FUN_BSP
     ),
     [_NUM] = LAYOUT(
