@@ -3,7 +3,7 @@
 # zilpzalp QMK firmware
 *A wonky 28-key split-unibody column-stagger keyboard.*  
 **IMPORTANT: This firmware is only suitable for the Seeed Xiao RP2040 MCU!**
-If you would like to use a different MCU, please consider using ZMK firmware.
+If you would like to use the BLE version of the XIAO, please consider using [ZMK firmware](https://github.com/kilipan/zmk-config-zilpzalp) (currently only tested for the RP2040 version).
 
 * Keyboard Maintainer: [kilipan](https://github.com/kilipan)
 * Hardware Supported: *zilpzalp keyboard with Seeed Studio Xiao RP2040 Controller*
