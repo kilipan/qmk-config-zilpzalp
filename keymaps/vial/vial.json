@@ -1,5 +1,5 @@
 {
-    "lighting": "none",
+    "lighting": "vialrgb",
     "matrix": {
         "rows": 7,
         "cols": 4

@@ -10,6 +10,7 @@
         "console": false,
         "extrakey": true,
         "mousekey": true,
+        "rgb_matrix": true,
         "nkro": true
     },
     "matrix_pins": {
@@ -22,6 +23,16 @@
         "device_version": "1.0.0",
         "pid": "0x0001",
         "vid": "0xABBA"
+    },
+    "ws2812": {
+        "pin": "GP12",
+        "driver": "vendor"
+    },
+    "rgb_matrix": {
+      "driver": "ws2812",
+      "layout": [
+         {"flags": 2, "matrix": [5, 3], "x": 5, "y": 3}
+      ]
     },
     "layouts": {
         "LAYOUT": {

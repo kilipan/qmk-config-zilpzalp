@@ -10,3 +10,4 @@
 // */
 #define MATRIX_COLS 4
 #define MATRIX_ROWS 7
+#define DYNAMIC_KEYMAP_LAYER_COUNT 8
